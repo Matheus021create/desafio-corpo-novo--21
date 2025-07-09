@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desafio Corpo Novo 21 Dias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #0a7d5c;
+    }
+    .button {
+      display: inline-block;
+      background: #0a7d5c;
+      color: #fff;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .bonus, .depoimento {
+      background: #e7f8f1;
+      padding: 15px;
+      margin-top: 20px;
+      border-left: 5px solid #0a7d5c;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    form input[type="email"] {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    form button {
+      background: #0a7d5c;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #075c41;
+    }
+
+    /* Chatbot */
+    #chatbot-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0a7d5c;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    #chatbox {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 320px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+      overflow: hidden;
+      font-size: 14px;
+      flex-direction: column;
+    }
+
+    #chatbox-header {
+      background-color: #0a7d5c;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    #chatbox-messages {
+      padding: 10px;
+      height: 240px;
+      overflow-y: auto;
+      background: #f9f9f9;
+    }
+
+    #chatbox-input {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+
+    #chatbox-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 0;
+    }
+
+    #chatbox-input button {
+      padding: 10px;
+      background-color: #0a7d5c;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Transforme Seu Corpo em Apenas 21 Dias Sem Dietas Malucas ou Academia!</h1>
+    <p>Emagreça até 4kg de forma natural, com um método 100% prático, saudável e testado por centenas de pessoas.</p>
+
+    <h2>Sobre o Desafio</h2>
+    <p>O <strong>Desafio Corpo Novo 21 Dias</strong> é um guia completo com alimentação estratégica, exercícios leves e hábitos saudáveis para você conquistar um corpo mais leve, desinchado e saudável sem sair de casa!</p>
+
+    <h2>O que você vai receber:</h2>
+    <ul>
+      <li>📘 E-book completo com plano alimentar de 21 dias</li>
+      <li>🏋️ Treinos leves para fazer em casa (sem equipamentos)</li>
+      <li>🧠 Dicas práticas para controlar a ansiedade e compulsão alimentar</li>
+      <li>🍽️ Receitas fit simples, rápidas e baratas</li>
+      <li>📱 Bônus: grupo exclusivo no WhatsApp para suporte e motivação (opcional)</li>
+      <li>📦 Bônus extra: Guia com sobremesas saudáveis + sucos detox</li>
+    </ul>
+
+    <div class="depoimento">
+      <strong>Depoimento:</strong>
+      <p>"Eu já tinha tentado de tudo, mas só com esse desafio consegui emagrecer 3,8 kg e ainda me sentir bem comigo mesma. É fácil de seguir, gostoso e leve. Super indico!"<br>
+      — Camila A., 32 anos</p>
+    </div>
+
+    <h2>Garantia Incondicional de 7 Dias</h2>
+    <p>Se por qualquer motivo você não gostar do conteúdo, você tem 7 dias para pedir o reembolso total. Simples assim.</p>
+
+    <h2>Investimento:</h2>
+    <p><strong>Por apenas Є 8.00</strong>, você garante acesso imediato ao programa completo!</p>
+
+    <a class="button" href="https://go.hotmart.com/M100719525J" target="_blank">👉 Quero Começar o Desafio Agora</a>
+
+    <h2>Receba novidades por e-mail:</h2>
+    <form action="https://formspree.io/f/xyyrrgke" method="POST">
+      <input type="email" name="email" placeholder="Digite seu melhor e-mail" required />
+      <input type="hidden" name="_subject" value="Novo inscrito no Desafio Corpo Novo" />
+      <input type="hidden" name="_next" value="https://matheus021create.github.io/desafio-corpo-novo-21/obrigado.html" />
+      <button type="submit">Receber Novidades</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 NutriFitOnline. Todos os direitos reservados.
+  </footer>
+
+  <!-- Botão flutuante -->
+  <button id="chatbot-btn">💬</button>
+
+  <!-- Caixa de Chat -->
+  <div id="chatbox">
+    <div id="chatbox-header">Corpo Novo Chat</div>
+    <div id="chatbox-messages">
+      <p><strong>Bot:</strong> Olá! Como posso te ajudar hoje?</p>
+    </div>
+    <div id="chatbox-input">
+      <input type="text" id="user-input" placeholder="Digite sua pergunta..." />
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  <script>
+    const chatbotBtn = document.getElementById('chatbot-btn');
+    const chatbox = document.getElementById('chatbox');
+    const messages = document.getElementById('chatbox-messages');
+
+    chatbotBtn.onclick = () => {
+      chatbox.style.display = chatbox.style.display === 'block' ? 'none' : 'block';
+    };
+
+    function sendMessage() {
+      const input = document.getElementById('user-input');
+      const userText = input.value.trim();
+      if (userText === '') return;
+
+      messages.innerHTML += `<p><strong>Você:</strong> ${userText}</p>`;
+
+      let resposta = "Desculpe, não entendi. Pode reformular sua pergunta?";
+
+      const texto = userText.toLowerCase();
+
+      if (texto.includes("preço") || texto.includes("valor")) {
+        resposta = "O valor do desafio completo é apenas €8,00!";
+      } else if (texto.includes("como funciona")) {
+        resposta = "Você recebe um e-book com plano alimentar + treinos + bônus via e-mail.";
+      } else if (texto.includes("emagrecer") || texto.includes("perder peso")) {
+        resposta = "Sim! O desafio ajuda a perder até 4kg em 21 dias com saúde.";
+      } else if (texto.includes("treino")) {
+        resposta = "Os treinos são leves e podem ser feitos em casa, sem equipamento.";
+      } else if (texto.includes("receita") || texto.includes("cardápio")) {
+        resposta = "Você receberá receitas fit, práticas e saudáveis no material.";
+      } else if (texto.includes("garantia") || texto.includes("reembolso")) {
+        resposta = "Você tem 7 dias de garantia incondicional para pedir reembolso.";
+      } else if (texto.includes("whatsapp") || texto.includes("grupo")) {
+        resposta = "Você será convidado para um grupo exclusivo de apoio no WhatsApp.";
+      }
+
+      messages.innerHTML += `<p><strong>Bot:</strong> ${resposta}</p>`;
+      input.value = '';
+      messages.scrollTop = messages.scrollHeight;
+    }
+  </script>
+</body>
+</html>
